@@ -1,24 +1,31 @@
 const db = require('./conn');
 
 class ToDoListModel {
-    constructor(id, topic_name, topic_score) {
+    constructor(id, task, user_tasks, status) {
         this.id = id;
-        this.topic_name = topic_name;
-        this.topic_score = topic_score;
+        this.task = task;
+        this.user_tasks = user_tasks;
+        this.status = status;
     }
 
-    static async getAllTaskData() {
+    static async getoDoListData() {
         try {
-            const response = await db.any(
-                `SELECT * FROM task
-                    
-                `
-            )
-            return response;
-        } catch (error) {
-            console.error('ERROR: ', error);
-            return error;
+            const response = await db.any('SELECT * FROM toDoList;');
+            return response
+        } catch (err) {
+            console.log(`ERROR: ${err}`);
+            return err;
         }
+
+    }
+
+
+    static async getUserList(id) {
+        const response = await db.one(
+            `SELECT * FROM users WHERE id = ${id};`
+        );
+        console.log('RESPONSE FROM GET BY ID: ', response);
+        return response;
     }
 }
 
