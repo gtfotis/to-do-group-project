@@ -1,21 +1,31 @@
 {
-  "name": "to-do-group-project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcrypt": "^5.0.1",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "express-es6-template-engine": "^2.2.3",
-    "node-fetch": "^2.6.1",
-    "pg": "^8.6.0",
-    "sequelize": "^6.6.4"
-  }
+    "name": "to-do-group-project",
+    "version": "1.0.0",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "express-es6-template-engine": "^2.2.3",
+        "node-fetch": "^2.6.1",
+        "pg-promise": "^10.10.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gtfotis/to-do-group-project.git"
+    },
+    "bugs": {
+        "url": "https://github.com/gtfotis/to-do-group-project/issues"
+    },
+    "homepage": "https://github.com/gtfotis/to-do-group-project#readme",
+    "description": "",
+    "devDependencies": {
+        "nodemon": "^2.0.9"
+    }
 }
