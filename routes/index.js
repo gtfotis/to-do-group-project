@@ -56,7 +56,7 @@ router.post('/', async(req, res) => {
 
     if (!!response.isValid) {
         const { isValid, user_id, name, email } = response;
-
+        console.log(response);
         req.session.is_logged_in = isValid;
         req.session.user_id = user_id;
         req.session.name = name;
